@@ -1,0 +1,32 @@
+aside{
+    height: 90vh;
+    overflow: auto;
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5)
+}
+
+#logo {
+    font-size: 100px;
+    text-align: center;
+    color: antiquewhite;
+    padding: 30px;
+}
+
+aside ul {
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+ul li {
+    list-style: none;
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    padding: 10px;
+}
+
+li a {
+    text-decoration: none;
+    color:antiquewhite;
+}
+
+li:hover a{
+    margin-left: 20px;
+    transition: 0.5s;
+}
