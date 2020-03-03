@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import Inicio from './pages/Inicio/Inicio';
 import Perfil from './pages/Perfil/Perfil';
-import Novo from './pages/Novo/Novo';
+import Repositorios from './pages/Repositorios/Repositorios';
 import Compartilhados from './pages/Compartilhados/Compartilhados';
 import Grupos from './pages/Grupos/Grupos';
 import Ranking from './pages/Ranking/Ranking';
@@ -17,7 +17,7 @@ class Sidebar extends Component {
                     <ul>
                         <li><Link to="/">Início</Link></li>
                         <li><Link to="/perfil">Perfil</Link></li>
-                        <li><Link to="/novo">Novo</Link></li>
+                        <li><Link to="/repositorios">Repositorios</Link></li>
                         <li><Link to="/compartilhados">Compartilhados</Link></li>
                         <li><Link to="/grupos">Grupos</Link></li>
                         <li><Link to="/ranking">Ranking</Link></li>
@@ -33,8 +33,8 @@ class Sidebar extends Component {
                     <Route exact path="/perfil">
                         <Perfil />
                     </Route>
-                    <Route exact path="/novo">
-                        <Novo />
+                    <Route exact path="/repositorios">
+                        <Repositorios />
                     </Route>
                     <Route exact path="/grupos">
                         <Grupos />

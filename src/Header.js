@@ -1,16 +1,28 @@
+import axios from 'axios'
 import React, { Component } from 'react';
 
+
+
+
 class Header extends Component {
+    state = {
+        person: []
+    }
+
+    componentDidMount() {
+        axios.get('https://api.github.com/users/gustavohcmelo')
+        .then(response => {
+            const person = response.data;
+            this.setState({ person });
+        })
+    }
+
     render(){
         return (
             <nav>
                 <div id="search-area">
-                    <img src={require ('./images/unnamed.jpg')} alt=""/>
-                    <span>Olá, Gustavo Henrique Cordeiro de Melo</span>
-                </div>
-                <div id="login-area">
-                    <input type="text" placeholder="Realizar Busca..."/>
-                    <button><img src={require('./images/search.png')} alt=""/></button>
+                    <img src={this.state.person.avatar_url} alt=""/>
+                    <span>Olá, {this.state.person.name}</span>
                 </div>
             </nav>
         )
